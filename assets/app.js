@@ -114,20 +114,4 @@
     });
   });
 
-  const calculator = document.querySelector("[data-routine-calculator]");
-  if (calculator) {
-    calculator.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const data = new FormData(calculator);
-      const sleep = Math.min(10, Math.max(0, Number(data.get("sleep")) || 0));
-      const water = Math.min(12, Math.max(0, Number(data.get("water")) || 0));
-      const sunscreen = Math.min(7, Math.max(0, Number(data.get("sunscreen")) || 0));
-      const routine = Math.min(7, Math.max(0, Number(data.get("routine")) || 0));
-      const score = Math.round((sleep / 8 * 25) + (water / 8 * 25) + (sunscreen / 7 * 25) + (routine / 7 * 25));
-      const bounded = Math.min(100, score);
-      const result = calculator.querySelector("[data-calculator-result]");
-      result.innerHTML = `<strong>${bounded}% de constância</strong><span>Este índice é apenas educativo e não representa avaliação médica.</span>`;
-      result.removeAttribute("hidden");
-    });
-  }
 })();

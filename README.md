@@ -6,7 +6,8 @@ Funil estático da Bela Vitta, reconstruído para uma oferta digital de receita 
 
 - `/` — presell
 - `/vsl/` — página principal da VSL e oferta
-- `/calculadora/` — prévia do bônus digital
+
+A Calculadora Digital Bela Vitta é um benefício pós-compra e não possui rota pública neste projeto. Ela será entregue apenas dentro da área de membros.
 
 ## Configuração
 
@@ -29,4 +30,3 @@ python3 -m http.server 4173
 ```
 
 Depois acesse `http://localhost:4173`.
-
