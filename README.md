@@ -6,6 +6,8 @@ Funil estático da Bela Vitta, reconstruído para uma oferta digital de receita 
 
 - `/` — presell
 - `/vsl/` — página principal da VSL e oferta
+- `/pt/` — presell em português de Portugal
+- `/pt/vsl/` — VSL e oferta para Portugal, com preços em euros
 
 A Calculadora Digital Bela Vitta é um benefício pós-compra e não possui rota pública neste projeto. Ela será entregue apenas dentro da área de membros.
 
@@ -20,6 +22,8 @@ As integrações pendentes ficam centralizadas em `assets/config.js`:
 - URL da área de membros.
 
 Enquanto VTurb, preço e checkout estiverem vazios, a página funciona em modo de revisão e não envia o visitante para uma compra inexistente.
+
+A versão de Portugal utiliza `pt/config.js`, com preços e futuros links de checkout/VTurb independentes da versão brasileira.
 
 ## Desenvolvimento local
 

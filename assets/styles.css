@@ -151,6 +151,7 @@ button, input { font: inherit; }
 }
 .presell-media img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
