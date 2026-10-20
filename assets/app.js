@@ -84,8 +84,21 @@
       const player = document.createElement("vturb-smartplayer");
       player.id = vturb.playerId;
       player.style.display = "block";
+      player.style.margin = "0 auto";
+      player.style.width = "100%";
+
+      const placeholder = document.createElement("div");
+      placeholder.className = "vturb-player-placeholder";
+      placeholder.style.position = "relative";
+      placeholder.style.width = "100%";
+      placeholder.style.padding = "56.25% 0 0";
+      placeholder.style.zIndex = "0";
+      placeholder.style.backgroundColor = "black";
+      player.appendChild(placeholder);
+
       playerHost.replaceChildren(player);
       const script = document.createElement("script");
+      script.type = "text/javascript";
       script.src = vturb.scriptUrl;
       script.async = true;
       document.head.appendChild(script);

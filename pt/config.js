@@ -18,8 +18,8 @@ window.BELA_VITTA_CONFIG = Object.freeze({
   },
   memberAreaUrl: "",
   vturb: {
-    playerId: "",
-    scriptUrl: "",
+    playerId: "vid-6ad6bc5f57190eb9fffed2eb",
+    scriptUrl: "https://scripts.converteai.net/cd42ba67-0c51-4ed3-9598-68fb5cb77894/players/6ad6bc5f57190eb9fffed2eb/v4/player.js",
     revealAfterSeconds: 1994
   },
   supportUrl: "https://tk.vita-science.com/sfunnel/19644/",

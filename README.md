@@ -18,7 +18,7 @@ A Calculadora Digital Bela Vitta é um benefício pós-compra e não possui rota
 
 ## Configuração
 
-As integrações pendentes ficam centralizadas em `assets/config.js`:
+As integrações ficam centralizadas em `assets/config.js`:
 
 - player e script do VTurb;
 - tempo de liberação da oferta;
@@ -28,7 +28,7 @@ As integrações pendentes ficam centralizadas em `assets/config.js`:
 
 Na VSL, a oferta é liberada em `33:14` (`1994` segundos). Para revisão, cinco cliques ou toques rápidos no canto superior esquerdo do vídeo liberam a oferta antes e mantêm esse estado durante a sessão atual do navegador.
 
-Enquanto VTurb, preço e checkout estiverem vazios, a página funciona em modo de revisão e não envia o visitante para uma compra inexistente.
+O player VTurb está configurado nas duas versões. Enquanto os links de checkout estiverem vazios, a página continua em modo de revisão e não envia o visitante para uma compra inexistente.
 
 O campo `memberAreaUrl` controla a página `/acesso/`. Enquanto estiver vazio, ela exibe uma tela de revisão. Quando receber uma URL HTTPS válida, passa a encaminhar automaticamente o cliente para a plataforma configurada. Assim, o link e o QR code já impressos no PDF não precisam ser alterados.
 
