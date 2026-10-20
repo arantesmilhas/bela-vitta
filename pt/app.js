@@ -3,8 +3,11 @@
 
   const config = window.BELA_VITTA_CONFIG || {};
   const query = window.location.search;
-  const portugalHost = "naturallvitttamais.astroluz.site";
-  const marketBase = window.location.hostname.toLowerCase() === portugalHost ? "" : "/pt";
+  const portugalHosts = new Set([
+    "naturallvitttamais.zoomfitpro.com",
+    "naturallvitttamais.astroluz.site",
+  ]);
+  const marketBase = portugalHosts.has(window.location.hostname.toLowerCase()) ? "" : "/pt";
 
   document.querySelectorAll("[data-market-route]").forEach((link) => {
     link.href = `${marketBase}${link.dataset.marketRoute}`;
