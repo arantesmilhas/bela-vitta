@@ -26,6 +26,8 @@ As integrações pendentes ficam centralizadas em `assets/config.js`:
 - URL do checkout;
 - URL da área de membros.
 
+Na VSL, a oferta é liberada em `33:14` (`1994` segundos). Para revisão, cinco cliques ou toques rápidos no canto superior esquerdo do vídeo liberam a oferta antes e mantêm esse estado durante a sessão atual do navegador.
+
 Enquanto VTurb, preço e checkout estiverem vazios, a página funciona em modo de revisão e não envia o visitante para uma compra inexistente.
 
 O campo `memberAreaUrl` controla a página `/acesso/`. Enquanto estiver vazio, ela exibe uma tela de revisão. Quando receber uma URL HTTPS válida, passa a encaminhar automaticamente o cliente para a plataforma configurada. Assim, o link e o QR code já impressos no PDF não precisam ser alterados.

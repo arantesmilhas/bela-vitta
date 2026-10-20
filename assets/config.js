@@ -17,7 +17,7 @@ window.BELA_VITTA_CONFIG = Object.freeze({
   vturb: {
     playerId: "",
     scriptUrl: "",
-    revealAfterSeconds: 0
+    revealAfterSeconds: 1994
   },
   supportUrl: "https://tk.vita-science.com/sfunnel/19644/",
   legal: {

@@ -95,14 +95,66 @@
   const delayed = document.querySelectorAll("[data-delayed-offer]");
   if (delayed.length) {
     const seconds = Number(config.vturb && config.vturb.revealAfterSeconds) || 0;
-    const shouldDelay = !config.reviewMode && seconds > 0;
-    if (shouldDelay) {
-      delayed.forEach((node) => node.setAttribute("hidden", ""));
-      window.setTimeout(() => {
-        delayed.forEach((node) => node.removeAttribute("hidden"));
-      }, seconds * 1000);
-    } else {
+    const offerStateKey = `bela-vitta:offer-revealed:${config.market || "BR"}`;
+    let revealTimer;
+    let shortcutHotspot;
+    let offerRevealed = false;
+
+    function hasStoredReveal() {
+      try {
+        return window.sessionStorage.getItem(offerStateKey) === "true";
+      } catch (_) {
+        return false;
+      }
+    }
+
+    function storeReveal() {
+      try {
+        window.sessionStorage.setItem(offerStateKey, "true");
+      } catch (_) {
+        // O atalho continua a funcionar mesmo se o armazenamento estiver bloqueado.
+      }
+    }
+
+    function revealOffer(options) {
+      if (offerRevealed) return;
+      offerRevealed = true;
+      window.clearTimeout(revealTimer);
+      if (shortcutHotspot) shortcutHotspot.remove();
       delayed.forEach((node) => node.removeAttribute("hidden"));
+      if (options && options.persist) storeReveal();
+      if (options && options.notify) {
+        showNotice("Atalho de revisão ativado: a oferta foi liberada.");
+      }
+    }
+
+    if (seconds > 0 && !hasStoredReveal()) {
+      delayed.forEach((node) => node.setAttribute("hidden", ""));
+      revealTimer = window.setTimeout(() => revealOffer(), seconds * 1000);
+    } else {
+      revealOffer();
+    }
+
+    if (playerHost && !offerRevealed) {
+      const shortcutWindowMs = 4000;
+      let shortcutTouches = [];
+      shortcutHotspot = document.createElement("button");
+      shortcutHotspot.type = "button";
+      shortcutHotspot.className = "review-shortcut";
+      shortcutHotspot.tabIndex = -1;
+      shortcutHotspot.setAttribute("aria-hidden", "true");
+      playerHost.appendChild(shortcutHotspot);
+
+      playerHost.addEventListener("pointerup", () => {
+        const now = Date.now();
+        shortcutTouches = shortcutTouches.filter((time) => now - time <= shortcutWindowMs);
+        shortcutTouches.push(now);
+
+        if (shortcutTouches.length >= 5) {
+          shortcutTouches = [];
+          revealOffer({ persist: true, notify: true });
+        }
+      }, { capture: true, passive: true });
     }
   }
 
