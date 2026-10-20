@@ -28,9 +28,9 @@ As integrações ficam centralizadas em `assets/config.js`:
 
 Na VSL, a oferta é liberada em `33:14` (`1994` segundos). Para revisão, cinco cliques ou toques rápidos no canto superior esquerdo do vídeo liberam a oferta antes e mantêm esse estado durante a sessão atual do navegador.
 
-O player VTurb está configurado nas duas versões. Enquanto os links de checkout estiverem vazios, a página continua em modo de revisão e não envia o visitante para uma compra inexistente.
+O player VTurb está configurado nas duas versões. Na versão brasileira, os links de checkout da Cakto estão ativos para as ofertas de 30 e 365 dias. A versão portuguesa continua com os checkouts independentes em `pt/config.js`.
 
-O campo `memberAreaUrl` controla a página `/acesso/`. Enquanto estiver vazio, ela exibe uma tela de revisão. Quando receber uma URL HTTPS válida, passa a encaminhar automaticamente o cliente para a plataforma configurada. Assim, o link e o QR code já impressos no PDF não precisam ser alterados.
+O campo `memberAreaUrl` controla a página `/acesso/` e encaminha o cliente para o entregável digital. Assim, o link e o QR code já impressos no PDF não precisam ser alterados.
 
 A rota `/entregavel/` é apenas uma prévia com `noindex`. Este projeto não possui autenticação; o conteúdo pago definitivo deve ser copiado para a plataforma de membros antes do lançamento.
 
