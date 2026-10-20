@@ -158,7 +158,7 @@
       shortcutHotspot.setAttribute("aria-hidden", "true");
       playerHost.appendChild(shortcutHotspot);
 
-      playerHost.addEventListener("pointerup", () => {
+      shortcutHotspot.addEventListener("pointerup", () => {
         const now = Date.now();
         shortcutTouches = shortcutTouches.filter((time) => now - time <= shortcutWindowMs);
         shortcutTouches.push(now);
@@ -167,7 +167,7 @@
           shortcutTouches = [];
           revealOffer({ persist: true, notify: true });
         }
-      }, { capture: true, passive: true });
+      }, { passive: true });
     }
   }
 
