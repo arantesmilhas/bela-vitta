@@ -9,12 +9,13 @@ Funil estático da Bela Vitta, reconstruído para uma oferta digital de receita 
 - `/pt/` — presell em português de Portugal
 - `/pt/vsl/` — VSL e oferta para Portugal, com preços em euros
 - `/entregavel/` — prévia não indexada do guia visual da bebida roxa de uva e chia
-- `/acesso/` — ponte estável para a futura área de membros autenticada
+- `/calculadora/` — bônus digital pós-compra para cálculo educativo de constância
+- `/acesso/` — ponte estável que redireciona para a área de membros em `/entregavel/`
 - `/downloads/guia-bela-vitta.pdf` — PDF do guia com botão e QR code para `/acesso/`
 
 A versão portuguesa é publicada em `https://naturallvitttamais.astroluz.site`, com a VSL em `/vsl`.
 
-A Calculadora Digital Bela Vitta é um benefício pós-compra e não possui rota pública neste projeto. Ela será entregue apenas dentro da área de membros.
+A Calculadora Digital Bela Vitta é um benefício pós-compra e só é divulgada dentro do entregável, sem aparecer na VSL principal.
 
 ## Configuração
 
@@ -30,7 +31,7 @@ Na VSL, a oferta é liberada em `33:14` (`1994` segundos). Para revisão, cinco 
 
 O player VTurb está configurado nas duas versões. Na versão brasileira, os links de checkout da Cakto estão ativos para as ofertas de 30 e 365 dias. Na versão portuguesa, os links da Hotmart estão ativos para as ofertas de 19,90 € e 39,90 €, configurados separadamente em `pt/config.js`.
 
-O campo `memberAreaUrl` controla a página `/acesso/` e encaminha o cliente para o entregável digital. Assim, o link e o QR code já impressos no PDF não precisam ser alterados.
+O endereço `/acesso/` encaminha o cliente diretamente para a área de membros em `/entregavel/`. Assim, o link e o QR code já impressos no PDF não precisam ser alterados. Dentro do entregável, o botão do bônus abre `/calculadora/`.
 
 A rota `/entregavel/` é apenas uma prévia com `noindex`. Este projeto não possui autenticação; o conteúdo pago definitivo deve ser copiado para a plataforma de membros antes do lançamento.
 
