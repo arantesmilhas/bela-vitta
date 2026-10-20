@@ -8,21 +8,6 @@
       "has": [
         {
           "type": "host",
-          "value": "naturallvitttamais.zoomfitpro.com"
-        }
-      ],
-      "headers": {
-        "X-Content-Type-Options": "nosniff",
-        "Referrer-Policy": "strict-origin-when-cross-origin",
-        "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
-      },
-      "continue": true
-    },
-    {
-      "src": "^/.*$",
-      "has": [
-        {
-          "type": "host",
           "value": "naturallvitttamais.astroluz.site"
         }
       ],
@@ -32,16 +17,6 @@
         "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
       },
       "continue": true
-    },
-    {
-      "src": "^/$",
-      "has": [
-        {
-          "type": "host",
-          "value": "naturallvitttamais.zoomfitpro.com"
-        }
-      ],
-      "dest": "/pt"
     },
     {
       "src": "^/$",
@@ -58,30 +33,10 @@
       "has": [
         {
           "type": "host",
-          "value": "naturallvitttamais.zoomfitpro.com"
-        }
-      ],
-      "dest": "/pt/vsl"
-    },
-    {
-      "src": "^/vsl/?$",
-      "has": [
-        {
-          "type": "host",
           "value": "naturallvitttamais.astroluz.site"
         }
       ],
       "dest": "/pt/vsl"
-    },
-    {
-      "src": "^/presell/?$",
-      "has": [
-        {
-          "type": "host",
-          "value": "naturallvitttamais.zoomfitpro.com"
-        }
-      ],
-      "dest": "/pt"
     },
     {
       "src": "^/presell/?$",

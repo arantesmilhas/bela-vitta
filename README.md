@@ -14,7 +14,7 @@ Funil estático da Bela Vitta, reconstruído para uma oferta digital de receita 
 - `/acesso/` — ponte estável que redireciona para a área de membros em `/entregavel/`
 - `/downloads/guia-bela-vitta.pdf` — PDF do guia com botão e QR code para `/acesso/`
 
-A versão portuguesa é publicada em `https://naturallvitttamais.zoomfitpro.com`, com a VSL em `/vsl`. O domínio anterior, `naturallvitttamais.astroluz.site`, permanece como endereço de compatibilidade.
+A versão brasileira é publicada em `https://naturallvitttamais.zoomfitpro.com`, com a VSL em `/vsl`. A versão portuguesa permanece em `https://naturallvitttamais.astroluz.site`, também com a VSL em `/vsl`.
 
 A Calculadora Digital Bela Vitta e o kit de organização são benefícios pós-compra divulgados somente dentro do entregável, sem aparecer na VSL principal. Checklist, calendário, preferências, anotações e histórico da calculadora ficam salvos localmente no navegador do cliente.
 
