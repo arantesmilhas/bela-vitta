@@ -28,13 +28,13 @@ As integrações ficam centralizadas em `assets/config.js`:
 
 Na VSL, a oferta é liberada em `33:14` (`1994` segundos). Para revisão, cinco cliques ou toques rápidos no canto superior esquerdo do vídeo liberam a oferta antes e mantêm esse estado durante a sessão atual do navegador.
 
-O player VTurb está configurado nas duas versões. Na versão brasileira, os links de checkout da Cakto estão ativos para as ofertas de 30 e 365 dias. A versão portuguesa continua com os checkouts independentes em `pt/config.js`.
+O player VTurb está configurado nas duas versões. Na versão brasileira, os links de checkout da Cakto estão ativos para as ofertas de 30 e 365 dias. Na versão portuguesa, os links da Hotmart estão ativos para as ofertas de 19,90 € e 39,90 €, configurados separadamente em `pt/config.js`.
 
 O campo `memberAreaUrl` controla a página `/acesso/` e encaminha o cliente para o entregável digital. Assim, o link e o QR code já impressos no PDF não precisam ser alterados.
 
 A rota `/entregavel/` é apenas uma prévia com `noindex`. Este projeto não possui autenticação; o conteúdo pago definitivo deve ser copiado para a plataforma de membros antes do lançamento.
 
-A versão de Portugal utiliza `pt/config.js`, com preços e futuros links de checkout/VTurb independentes da versão brasileira.
+A versão de Portugal utiliza `pt/config.js`, com preços, links de checkout da Hotmart e VTurb independentes da versão brasileira.
 
 ## Desenvolvimento local
 
