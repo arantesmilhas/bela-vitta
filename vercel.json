@@ -37,36 +37,36 @@
       "permanent": true
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
+      "src": "^/$",
       "has": [
         {
           "type": "host",
           "value": "naturallvitttamais.astroluz.site"
         }
       ],
-      "destination": "/pt"
+      "dest": "/pt/index.html"
     },
     {
-      "source": "/vsl",
+      "src": "^/vsl/?$",
       "has": [
         {
           "type": "host",
           "value": "naturallvitttamais.astroluz.site"
         }
       ],
-      "destination": "/pt/vsl"
+      "dest": "/pt/vsl/index.html"
     },
     {
-      "source": "/presell",
+      "src": "^/presell/?$",
       "has": [
         {
           "type": "host",
           "value": "naturallvitttamais.astroluz.site"
         }
       ],
-      "destination": "/pt"
+      "dest": "/pt/index.html"
     }
   ],
   "headers": [
