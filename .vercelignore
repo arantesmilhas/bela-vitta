@@ -3,3 +3,8 @@
 .git/
 .vercel/
 reference-assets/
+tmp/
+scripts/
+assets/images/receita/*.png
+__pycache__/
+*.pyc

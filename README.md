@@ -8,6 +8,9 @@ Funil estático da Bela Vitta, reconstruído para uma oferta digital de receita 
 - `/vsl/` — página principal da VSL e oferta
 - `/pt/` — presell em português de Portugal
 - `/pt/vsl/` — VSL e oferta para Portugal, com preços em euros
+- `/entregavel/` — prévia não indexada do guia visual da bebida roxa de uva e chia
+- `/acesso/` — ponte estável para a futura área de membros autenticada
+- `/downloads/guia-bela-vitta.pdf` — PDF do guia com botão e QR code para `/acesso/`
 
 A versão portuguesa é publicada em `https://naturallvitttamais.astroluz.site`, com a VSL em `/vsl`.
 
@@ -24,6 +27,10 @@ As integrações pendentes ficam centralizadas em `assets/config.js`:
 - URL da área de membros.
 
 Enquanto VTurb, preço e checkout estiverem vazios, a página funciona em modo de revisão e não envia o visitante para uma compra inexistente.
+
+O campo `memberAreaUrl` controla a página `/acesso/`. Enquanto estiver vazio, ela exibe uma tela de revisão. Quando receber uma URL HTTPS válida, passa a encaminhar automaticamente o cliente para a plataforma configurada. Assim, o link e o QR code já impressos no PDF não precisam ser alterados.
+
+A rota `/entregavel/` é apenas uma prévia com `noindex`. Este projeto não possui autenticação; o conteúdo pago definitivo deve ser copiado para a plataforma de membros antes do lançamento.
 
 A versão de Portugal utiliza `pt/config.js`, com preços e futuros links de checkout/VTurb independentes da versão brasileira.
 

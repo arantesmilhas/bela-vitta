@@ -1,5 +1,8 @@
 .DS_Store
 .vercel
 reference-assets/
+tmp/
+__pycache__/
+*.pyc
 
 .env*

@@ -47,6 +47,10 @@
         }
       ],
       "dest": "/pt"
+    },
+    {
+      "src": "^/downloads/guia-bela-vitta\\.pdf$",
+      "dest": "/output/pdf/bela-vitta-guia-da-receita.pdf"
     }
   ],
   "headers": [
