@@ -2,41 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/pt",
-      "has": [
-        {
-          "type": "host",
-          "value": "naturallvitttamais.astroluz.site"
-        }
-      ],
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/pt/vsl",
-      "has": [
-        {
-          "type": "host",
-          "value": "naturallvitttamais.astroluz.site"
-        }
-      ],
-      "destination": "/vsl",
-      "permanent": true
-    },
-    {
-      "source": "/pt/presell",
-      "has": [
-        {
-          "type": "host",
-          "value": "naturallvitttamais.astroluz.site"
-        }
-      ],
-      "destination": "/",
-      "permanent": true
-    }
-  ],
   "routes": [
     {
       "src": "^/$",
@@ -46,7 +11,7 @@
           "value": "naturallvitttamais.astroluz.site"
         }
       ],
-      "dest": "/pt/index.html"
+      "dest": "/pt"
     },
     {
       "src": "^/vsl/?$",
@@ -56,7 +21,7 @@
           "value": "naturallvitttamais.astroluz.site"
         }
       ],
-      "dest": "/pt/vsl/index.html"
+      "dest": "/pt/vsl"
     },
     {
       "src": "^/presell/?$",
@@ -66,7 +31,7 @@
           "value": "naturallvitttamais.astroluz.site"
         }
       ],
-      "dest": "/pt/index.html"
+      "dest": "/pt"
     }
   ],
   "headers": [
