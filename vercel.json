@@ -2,6 +2,73 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/pt",
+      "has": [
+        {
+          "type": "host",
+          "value": "naturallvitttamais.astroluz.site"
+        }
+      ],
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pt/vsl",
+      "has": [
+        {
+          "type": "host",
+          "value": "naturallvitttamais.astroluz.site"
+        }
+      ],
+      "destination": "/vsl",
+      "permanent": true
+    },
+    {
+      "source": "/pt/presell",
+      "has": [
+        {
+          "type": "host",
+          "value": "naturallvitttamais.astroluz.site"
+        }
+      ],
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "naturallvitttamais.astroluz.site"
+        }
+      ],
+      "destination": "/pt"
+    },
+    {
+      "source": "/vsl",
+      "has": [
+        {
+          "type": "host",
+          "value": "naturallvitttamais.astroluz.site"
+        }
+      ],
+      "destination": "/pt/vsl"
+    },
+    {
+      "source": "/presell",
+      "has": [
+        {
+          "type": "host",
+          "value": "naturallvitttamais.astroluz.site"
+        }
+      ],
+      "destination": "/pt"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -31,4 +98,3 @@
     }
   ]
 }
-

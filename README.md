@@ -9,6 +9,8 @@ Funil estático da Bela Vitta, reconstruído para uma oferta digital de receita 
 - `/pt/` — presell em português de Portugal
 - `/pt/vsl/` — VSL e oferta para Portugal, com preços em euros
 
+A versão portuguesa é publicada em `https://naturallvitttamais.astroluz.site`, com a VSL em `/vsl`.
+
 A Calculadora Digital Bela Vitta é um benefício pós-compra e não possui rota pública neste projeto. Ela será entregue apenas dentro da área de membros.
 
 ## Configuração

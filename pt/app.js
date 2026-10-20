@@ -3,6 +3,12 @@
 
   const config = window.BELA_VITTA_CONFIG || {};
   const query = window.location.search;
+  const portugalHost = "naturallvitttamais.astroluz.site";
+  const marketBase = window.location.hostname.toLowerCase() === portugalHost ? "" : "/pt";
+
+  document.querySelectorAll("[data-market-route]").forEach((link) => {
+    link.href = `${marketBase}${link.dataset.marketRoute}`;
+  });
 
   function preserveQuery(link) {
     const href = link.getAttribute("href");
