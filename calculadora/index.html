@@ -50,6 +50,7 @@
             <input id="routine" name="routine" type="number" min="0" max="7" step="1" value="5" inputmode="numeric" required>
           </div>
         </div>
+        <details class="calculator-method"><summary>Como o índice é calculado?</summary><p>Sono, água, proteção solar e rotina de cuidados representam 25% cada. O resultado é apenas uma referência educativa de constância, não uma avaliação de saúde.</p></details>
         <button class="button button--wide" type="submit">Calcular minha constância</button>
         <div class="calculator-result" data-calculator-result aria-live="polite" hidden>
           <span>Seu índice de constância</span>
@@ -58,6 +59,13 @@
         </div>
         <small>Ferramenta educativa. O resultado não representa diagnóstico, avaliação ou recomendação médica.</small>
       </form>
+
+      <section class="calculator-history" aria-labelledby="history-title">
+        <div><span class="eyebrow">Salvo neste dispositivo</span><h2 id="history-title">Últimos cálculos</h2><p>Compare somente sua organização ao longo do tempo. O histórico não mede resultados físicos ou clínicos.</p></div>
+        <div class="calculator-history__list" data-calculator-history></div>
+        <p class="calculator-history__empty" data-calculator-history-empty>Nenhum cálculo salvo ainda.</p>
+        <button class="text-button" type="button" data-calculator-history-clear hidden>Limpar histórico</button>
+      </section>
 
       <a class="calculator-back" href="/entregavel/">← Voltar ao guia da receita</a>
     </section>
@@ -72,6 +80,6 @@
   </footer>
   <script src="/assets/config.js?v=20261020-1"></script>
   <script src="/assets/app.js?v=20261019-6"></script>
-  <script src="/assets/calculator.js?v=20261020-1"></script>
+  <script src="/assets/calculator.js?v=20261020-2"></script>
 </body>
 </html>

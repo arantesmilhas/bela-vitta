@@ -1,0 +1,99 @@
+.printables-page { min-height: 100vh; padding: 110px 24px 60px; background: #e9ecef; }
+.printables-toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  min-height: 82px;
+  padding: 12px 28px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .97);
+  box-shadow: 0 8px 28px rgba(23, 33, 43, .08);
+  backdrop-filter: blur(12px);
+}
+.printables-toolbar > a { color: var(--brand); font-size: .75rem; font-weight: 700; }
+.printables-toolbar > div { display: grid; text-align: center; }
+.printables-toolbar strong { color: var(--ink-strong); }
+.printables-toolbar span { color: var(--muted); font-size: .67rem; }
+.printables-toolbar .button { justify-self: end; }
+.printables-stack { display: grid; gap: 32px; }
+.print-sheet {
+  position: relative;
+  width: min(100%, 794px);
+  min-height: 1123px;
+  margin: 0 auto;
+  padding: 58px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 20px 65px rgba(23, 33, 43, .16);
+}
+.print-sheet::before { position: absolute; top: 0; right: 0; left: 0; height: 10px; background: linear-gradient(90deg, var(--brand-light), var(--violet)); content: ""; }
+.print-sheet__brand { display: flex; align-items: center; gap: 10px; margin-bottom: 50px; }
+.print-sheet__brand > span { display: grid; width: 40px; height: 40px; place-items: center; color: #fff; border-radius: 12px 12px 12px 4px; background: linear-gradient(145deg, var(--brand-light), var(--violet)); font-size: .72rem; font-weight: 800; }
+.print-sheet__brand > div { display: grid; }
+.print-sheet__brand strong { color: var(--ink-strong); font-size: .9rem; }
+.print-sheet__brand small { color: var(--muted); font-size: .6rem; }
+.print-sheet__number { position: absolute; top: 65px; right: 58px; margin: 0; color: var(--muted-light); font-size: .65rem; }
+.print-kicker { color: var(--violet); font-size: .67rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.print-sheet h1 { max-width: 620px; margin: 12px 0 10px; color: var(--ink-strong); font-size: 2.7rem; line-height: 1.06; letter-spacing: -.045em; }
+.print-lead { max-width: 650px; margin: 0 0 34px; color: var(--muted); font-size: .83rem; }
+.print-checklist { display: grid; gap: 11px; }
+.print-checklist label { display: grid; grid-template-columns: 24px 1fr; gap: 12px; padding: 16px; border: 1px solid var(--line); border-radius: 10px; }
+.print-checklist input { width: 17px; height: 17px; accent-color: var(--violet); }
+.print-checklist span { display: flex; justify-content: space-between; gap: 24px; }
+.print-checklist b { color: var(--ink-strong); font-size: .77rem; }
+.print-checklist small { color: var(--muted); font-size: .7rem; text-align: right; }
+.print-note-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+.print-note-grid > div { padding: 17px; border-radius: 10px; background: var(--soft-2); }
+.print-note-grid b { color: var(--ink-strong); font-size: .75rem; }
+.print-note-grid p { margin: 5px 0 0; color: var(--muted); font-size: .69rem; }
+.write-lines { display: grid; gap: 18px; margin-top: 34px; }
+.write-lines b { color: var(--ink-strong); font-size: .74rem; }
+.write-lines i { display: block; height: 1px; background: #d7dce1; }
+.write-lines--large { margin-top: 40px; }
+.print-day-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.print-day-grid span { display: grid; aspect-ratio: 1.25; place-items: center; color: var(--muted); border: 1px solid var(--line); border-radius: 9px; font-size: .72rem; font-weight: 700; }
+.print-week-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 11px; margin-top: 26px; }
+.print-week-grid > div { padding: 15px; border-left: 4px solid var(--violet); border-radius: 8px; background: var(--soft-2); }
+.print-week-grid b { color: var(--ink-strong); font-size: .72rem; }
+.print-week-grid p { margin: 4px 0 0; color: var(--muted); font-size: .66rem; }
+.print-month-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 11px; }
+.print-month-grid > div { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 16px; border: 1px solid var(--line); border-radius: 9px; }
+.print-month-grid b { color: var(--ink-strong); font-size: .72rem; }
+.print-month-grid span { color: #b5bac0; font-size: .7rem; letter-spacing: .04em; }
+.print-sheet footer { position: absolute; right: 58px; bottom: 42px; left: 58px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: .6rem; text-align: center; }
+
+@media (max-width: 760px) {
+  .printables-page { padding: 150px 12px 30px; }
+  .printables-toolbar { grid-template-columns: 1fr; gap: 7px; padding: 11px 16px; text-align: center; }
+  .printables-toolbar > a,
+  .printables-toolbar .button { justify-self: center; }
+  .print-sheet { min-height: auto; padding: 38px 24px 88px; }
+  .print-sheet__brand { margin-bottom: 34px; }
+  .print-sheet__number { top: 47px; right: 24px; }
+  .print-sheet h1 { font-size: 2rem; }
+  .print-note-grid,
+  .print-week-grid,
+  .print-month-grid { grid-template-columns: 1fr; }
+  .print-checklist span { flex-direction: column; gap: 3px; }
+  .print-checklist small { text-align: left; }
+  .print-day-grid { grid-template-columns: repeat(5, 1fr); }
+  .print-sheet footer { right: 24px; bottom: 28px; left: 24px; }
+}
+
+@media print {
+  @page { size: A4; margin: 0; }
+  .printables-page { padding: 0; background: #fff; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .printables-toolbar { display: none; }
+  .printables-stack { display: block; }
+  .print-sheet { width: 210mm; min-height: 297mm; padding: 16mm; border-radius: 0; box-shadow: none; page-break-after: always; }
+  .print-sheet:last-child { page-break-after: auto; }
+  .print-sheet__number { top: 17mm; right: 16mm; }
+  .print-sheet footer { right: 16mm; bottom: 11mm; left: 16mm; }
+}

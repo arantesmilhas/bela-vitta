@@ -5,6 +5,45 @@
   if (!calculator) return;
 
   const clamp = (value, minimum, maximum) => Math.min(maximum, Math.max(minimum, Number(value) || 0));
+  const historyKey = "bela-vitta:calculator:history:v1";
+  let history = [];
+
+  try {
+    history = JSON.parse(window.localStorage.getItem(historyKey) || "[]");
+    if (!Array.isArray(history)) history = [];
+    history = history.filter((entry) => entry && typeof entry === "object");
+  } catch (_) {
+    history = [];
+  }
+
+  function saveHistory() {
+    try {
+      window.localStorage.setItem(historyKey, JSON.stringify(history));
+    } catch (_) {
+      // A calculadora continua a funcionar sem histórico quando o armazenamento está bloqueado.
+    }
+  }
+
+  function renderHistory() {
+    const list = document.querySelector("[data-calculator-history]");
+    const empty = document.querySelector("[data-calculator-history-empty]");
+    const clear = document.querySelector("[data-calculator-history-clear]");
+    if (!list || !empty || !clear) return;
+
+    list.replaceChildren();
+    history.slice(0, 5).forEach((entry) => {
+      const item = document.createElement("article");
+      const date = new Date(entry.timestamp);
+      const dateNode = document.createElement("span");
+      const scoreNode = document.createElement("strong");
+      dateNode.textContent = Number.isNaN(date.getTime()) ? "Data indisponível" : date.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
+      scoreNode.textContent = `${Math.min(100, Math.max(0, Number(entry.score) || 0))}%`;
+      item.append(dateNode, scoreNode);
+      list.appendChild(item);
+    });
+    empty.hidden = history.length > 0;
+    clear.hidden = history.length === 0;
+  }
 
   calculator.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -33,5 +72,17 @@
     const result = calculator.querySelector("[data-calculator-result]");
     result.removeAttribute("hidden");
     result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    history.unshift({ score, timestamp: new Date().toISOString() });
+    history = history.slice(0, 5);
+    saveHistory();
+    renderHistory();
   });
+
+  document.querySelector("[data-calculator-history-clear]")?.addEventListener("click", () => {
+    history = [];
+    saveHistory();
+    renderHistory();
+  });
+
+  renderHistory();
 })();
