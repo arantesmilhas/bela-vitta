@@ -4,12 +4,12 @@ window.BELA_VITTA_CONFIG = Object.freeze({
   offers: {
     plan30: {
       label: "30 dias",
-      price: "R$ 97,00",
+      price: "R$ 47,00",
       checkoutUrl: "https://pay.cakto.com.br/bzhbgya_1222190"
     },
     plan365: {
       label: "365 dias",
-      price: "R$ 197,00",
+      price: "R$ 97,00",
       checkoutUrl: "https://pay.cakto.com.br/3d488tq"
     }
   },
