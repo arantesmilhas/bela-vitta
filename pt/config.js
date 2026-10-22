@@ -7,12 +7,12 @@ window.BELA_VITTA_CONFIG = Object.freeze({
   offers: {
     plan30: {
       label: "30 dias",
-      price: "19,90 €",
+      price: "9,97 €",
       checkoutUrl: "https://pay.hotmart.com/U108108459J?off=gs3nkxr6&checkoutMode=10"
     },
     plan365: {
       label: "365 dias",
-      price: "39,90 €",
+      price: "29,97 €",
       checkoutUrl: "https://pay.hotmart.com/U108108459J?off=l2g2jcdn&checkoutMode=10"
     }
   },

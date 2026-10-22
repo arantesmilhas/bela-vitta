@@ -381,6 +381,7 @@ button, input { font: inherit; }
   gap: 40px;
   margin: 0 auto;
 }
+.plans-grid--visual { max-width: 980px; align-items: start; }
 .plan-card {
   position: relative;
   display: flex;
@@ -394,6 +395,31 @@ button, input { font: inherit; }
   box-shadow: 0 12px 30px rgba(23,33,43,.06);
 }
 .plan-card--featured { border: 2px solid var(--violet); transform: none; }
+.plan-card.plan-card--visual {
+  min-height: auto;
+  padding: 10px 10px 20px;
+  border-color: #d9c2eb;
+  background: linear-gradient(180deg, #fff 0%, #faf6fd 100%);
+}
+.plan-card__visual {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 11px;
+  background: #3d063f;
+  box-shadow: 0 8px 24px rgba(61,6,63,.14);
+}
+.plan-card--visual .button { margin: 16px 8px 0; }
+.plan-card--visual .plan-card__secure { margin-right: 8px; margin-left: 8px; }
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
 .plan-card__ribbon {
   position: absolute;
   top: 14px;

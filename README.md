@@ -30,7 +30,7 @@ As integrações ficam centralizadas em `assets/config.js`:
 
 Na VSL, a oferta é liberada em `33:14` (`1994` segundos). Para revisão, cinco cliques ou toques rápidos no canto superior esquerdo do vídeo liberam a oferta antes e mantêm esse estado durante a sessão atual do navegador.
 
-O player VTurb está configurado nas duas versões. Na versão brasileira, os links de checkout da Cakto estão ativos para as ofertas de 30 e 365 dias. Na versão portuguesa, os links da Hotmart estão ativos para as ofertas de 19,90 € e 39,90 €, configurados separadamente em `pt/config.js`.
+O player VTurb está configurado nas duas versões. Na versão brasileira, os links de checkout da Cakto estão ativos para as ofertas de 30 e 365 dias. Na versão portuguesa, os links da Hotmart estão ativos para as ofertas de 9,97 € e 29,97 €, configurados separadamente em `pt/config.js`.
 
 O endereço `/acesso/` encaminha o cliente diretamente para a área de membros em `/entregavel/`. Assim, o link e o QR code já impressos no PDF não precisam ser alterados. Dentro do entregável, o botão do bônus abre `/calculadora/`.
 
